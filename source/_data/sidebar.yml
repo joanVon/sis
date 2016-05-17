@@ -1,0 +1,16 @@
+- name: 年级管理
+  type: item-grade
+  link: grade.html
+
+- name: 科目管理
+  type: item-subject
+  link: subject.html
+
+- name: 老师管理
+  type: item-teacher
+  link: teacher.html
+
+- name: 操作日志
+  type: item-log
+  link: log.html
+

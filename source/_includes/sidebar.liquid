@@ -1,0 +1,19 @@
+<div class="sidebar">
+  <div class="project-name">
+    家校通
+    <div class="options">
+      <!-- <a href="javascript:void(0);" title="修改密码" class="iconfont icon-edit-password" id="editPassword"></a> -->
+      <a href="javascript:void(0);" title="退出" class="iconfont icon-logout" id="logOut"></a>
+    </div>
+  </div>
+
+  <ul id="sidebarList">
+    {% for item in site.data.sidebar %}
+    <li class="side-list">
+      <a href="{{ item.link }}" class="link {{ item.type }}">{{ item.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+</div>

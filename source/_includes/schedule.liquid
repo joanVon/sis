@@ -1,0 +1,95 @@
+<table id="scheduleTable" class="display sis-table schedule-table" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th></th>
+      <!-- <th></th> -->
+      <th>周一</th>
+      <th>周二</th>
+      <th>周三</th>
+      <th>周四</th>
+      <th>周五</th>
+      <th>周六</th>
+      <th>周日</th>
+    </tr>
+  </thead>
+  <tbody class="tb-tbody">
+    <tr data="section-1">
+      <!-- <td rowspan="4" class="time">上午</td> -->
+      <td class="section" data="1">
+      一
+      </td>
+      {% for item in site.data.schedule %}
+        <td class="lesson {{ item.class }}" data="{{ item.week }}">
+          {{ item.subject }}</br>
+          {{ item.teacher }}
+        </td>
+      {% endfor %}
+    </tr>
+    <tr data="section-2">
+      <td class="section" data="2">二</td>
+      {% for item in site.data.schedule %}
+      <td class="lesson {{ item.class }}" data="{{ item.week }}">
+        {{ item.subject }}</br>
+        {{ item.teacher }}
+      </td>
+      {% endfor %}
+    </tr>
+    <tr data="section-3">
+      <td class="section" data="3">三</td>
+      {% for item in site.data.schedule %}
+      <td class="lesson {{ item.class }}" data="{{ item.week }}">
+        {{ item.subject }}</br>
+        {{ item.teacher }}
+      </td>
+      {% endfor %}
+    </tr>
+    <tr data="section-4">
+      <td class="section" data="section-4">四</td>
+      {% for item in site.data.schedule %}
+      <td class="lesson {{ item.class }}" data="{{ item.week }}">
+        {{ item.subject }}</br>
+        {{ item.teacher }}
+      </td>
+      {% endfor %}
+    </tr>
+
+    <!-- 下午 -->
+    <tr class="xw" data="section-5">
+      <!-- <td rowspan="4" class="time">下午</td> -->
+      <td class="section" data="5">五</td>
+      {% for item in site.data.schedule %}
+      <td class="lesson {{ item.class }}" data="{{ item.week }}">
+        {{ item.subject }}</br>
+        {{ item.teacher }}
+      </td>
+      {% endfor %}
+    </tr>
+    <tr data="section-6">
+      <td class="section" data="6">六</td>
+      {% for item in site.data.schedule %}
+      <td class="lesson {{ item.class }}" data="{{ item.week }}">
+        {{ item.subject }}</br>
+        {{ item.teacher }}
+      </td>
+      {% endfor %}
+    </tr>
+    <tr data="section-7">
+      <td class="section" data="7">七</td>
+      {% for item in site.data.schedule %}
+      <td class="lesson {{ item.class }}" data="{{ item.week }}">
+        {{ item.subject }}</br>
+        {{ item.teacher }}
+      </td>
+      {% endfor %}
+    </tr>
+    <tr data="section-8">
+      <td class="section" data="8">八</td>
+      {% for item in site.data.schedule %}
+      <td class="lesson {{ item.class }}" data="{{ item.week }}">
+        {{ item.subject }}</br>
+        {{ item.teacher }}
+      </td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>

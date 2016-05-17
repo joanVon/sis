@@ -1,0 +1,52 @@
+---
+layout: login
+title: 登录
+class: login
+---
+<div id="bannerWall">
+Welcome
+  <div class="title-box">
+    <p>教学管理系统</p>
+    <p class="en-name">Teaching management system</p>
+  </div>
+</div>
+
+<div class="login-container loginForm">
+  <div class="fill-group user ">
+    <label for="userName" class="label iconfont icon-user"></label>
+    <div class="control">
+      <input type="text" class="input username" id="userName" placeholder="请输入您的用户名">
+      <span class="error-info user-error"></span>
+    </div>
+  </div>
+
+  <div class="fill-group pwd ">
+    <label for="passWord" class="label iconfont icon-password"></label>
+    <div class="control">
+      <input type="password" class="input password" id="passWord" placeholder="请输入您的密码">
+      <span class="error-info password-error"></span>
+    </div>
+  </div>
+
+  <div class="fill-group btn-group">
+    <div class="control">
+      <button id="loginSubmit" class="btn-login btn-long">登 录</button>
+    </div>
+  </div>
+
+  <div class="error"><span>×</span></div>
+
+  <div class="ui-loginerr" style="display: none;">
+    <p></p>
+    <span class="close">×</span>
+  </div>
+
+</div>
+
+
+<!-- Javascript -->
+<script src="js/plugins.js"></script>
+<script src="js/dev/login.js"></script>
+
+
+

@@ -1,0 +1,110 @@
+// Body reset
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+}
+input:-moz-placeholder {
+  color: #999;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #999;
+}
+
+// Reset ul ol
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+a img {
+  border: 0 none;
+}
+
+// Heading
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.ui-backerror {
+    position: absolute;
+    padding: 10px;
+    width: 260px;
+    margin-left: -130px;
+    left: 50%;
+    top: 0;
+    text-align: center;
+    background-color: #ff5500;
+    z-index: 11000;
+    p {
+      padding: 0 5px;
+      font-size: 14px;
+      color: #fff;
+    }
+    .close-error {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      line-height: 10px;
+      font-size: 14px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+//clearfix
+.clearfix {
+  *zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.datatable-box {
+  width: 96%;
+  margin: 20px auto;
+}

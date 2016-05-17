@@ -1,0 +1,74 @@
+.icon {
+  @include inline-block;
+  vertical-align: -3px;
+}
+
+@each $icon in (
+    info,
+    success,
+    error,
+    warn,
+    clock
+  ) {
+  .icon-#{$icon} {
+    @include square(18px);
+    background: url(../images/icon/#{$icon}.png) no-repeat;
+  }
+}
+
+@each $icon in (
+    info-lg,
+    success-lg,
+    error-lg,
+    warn-lg
+  ) {
+  .icon-#{$icon} {
+    @include square(36px);
+    background: url(../images/icon/#{$icon}.png) no-repeat;
+  }
+}
+
+@each $icon in (
+    wait-lg
+  ) {
+  .icon-#{$icon} {
+    @include square(44px);
+    background: url(../images/icon/#{$icon}.gif) bottom no-repeat;
+  }
+}
+
+@each $icon in (
+    info-more-lg,
+    success-more-lg,
+    error-more-lg,
+    warn-more-lg
+  ) {
+  .icon-#{$icon} {
+    @include square(44px);
+    background: url(../images/icon/#{$icon}.png) no-repeat;
+  }
+}
+
+// Special
+.icon-sand-glass {
+  @include size(41px, 49px);
+  background: url(../images/icon/sand-glass.png) no-repeat top center;
+}
+
+
+//iconfont
+@font-face {
+  font-family: "iconfont";
+  src: url('../config/font/iconfont.eot'); /* IE9*/
+  src: url('../config/font/iconfont.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+  src: url('../config/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */ url('../font/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}

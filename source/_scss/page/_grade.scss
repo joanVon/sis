@@ -1,0 +1,13 @@
+.icon-branch {
+  font-size: 32px;
+  margin-left: 30px;
+  &:before {
+    content: "\e600";
+  }
+}
+
+.add-grade {
+  float: right;
+  margin-right: 20px;
+  margin-top: 25px;
+}

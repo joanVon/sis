@@ -1,0 +1,98 @@
+%btn {
+  @include inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  // @include button-size(0, 10px, 14px, 34px, 5px);
+  white-space: nowrap;
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: default;
+    pointer-events: none; // Future-proof disabling of clicks
+    @include opacity(.65);
+  }
+}
+
+.btn-login {
+  @extend %btn;
+  background-color: $btn-login-bg;
+  color: $btn-primary-color;
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+}
+
+.btn-next {
+  @extend %btn;
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+}
+.btn-back {
+   @extend %btn;
+  background-color: #fff;
+  color: $btn-primary-bg;
+  border: 1px solid $btn-primary-bg;
+}
+
+.btn-deny {
+  @extend %btn;
+  background-color: $btn-deny-bg;
+  color: $btn-deny-color;
+  border-color: #e6e6e6;
+}
+
+.btn-delete {
+  @extend %btn;
+}
+
+.btn-long {
+  @include button-size(0, 181px, 20px, 40px, 0px);
+}
+
+// large button
+.btn-lg {
+  @include button-size(0, 30px, 20px, 40px, 4px);
+}
+
+// larger button
+.btn-more-lg {
+  @include button-size(0, 60px, 20px, 40px, 4px);
+}
+
+// lower button
+.btn-lw {
+   @include button-size(0, 40px, 16px, 32px, 4px);
+}
+
+//add button
+.btn-add {
+   @include button-size(0, 12px, 16px, 30px, 4px);
+}
