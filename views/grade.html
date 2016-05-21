@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+
+  <title>年级管理</title>
+  <link rel="stylesheet" href="../css/page.css">
+  <script src="../js/lib/jquery.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/lib/dataTables.min.js"></script>
+  <script src="../js/lib/md5.js"></script>
+
+  <script src="../js/dev/utils.js"></script>
+  <script src="../js/plugins.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="../js/lib/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+  <body  class="pages page-grade">
+  <div class="page-container">
+
+  <!-- content -->
+    <div class="sidebar">
+  <div class="project-name">
+    家校通
+    <div class="options">
+      <!-- <a href="javascript:void(0);" title="修改密码" class="iconfont icon-edit-password" id="editPassword"></a> -->
+      <a href="javascript:void(0);" title="退出" class="iconfont icon-logout" id="logOut"></a>
+    </div>
+  </div>
+
+  <ul id="sidebarList">
+    
+    <li class="side-list">
+      <a href="grade.html" class="link item-grade">年级管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="subject.html" class="link item-subject">科目管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="teacher.html" class="link item-teacher">老师管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="log.html" class="link item-log">操作日志</a>
+    </li>
+    
+  </ul>
+
+
+</div>
+
+
+  <div class="main">
+    <div class="main-header">
+      <i class="iconfont icon-branch"></i>
+      <div class="title-module">
+        <span>年级管理</span>
+      </div>
+
+      <!-- <div class="control"> -->
+        <button class="btn-primary btn-add add-grade" id="addGrade">+ 新增年级</button>
+      <!-- </div> -->
+
+    </div>
+
+    <div class="main-list datatable-box">
+      <table id="gradesTable" class="display sis-table" cellpadding="0" cellspacing="0" width="100%">
+        <thead></thead>
+        <tbody class="tb-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="ui-backerror" style="display: none;">
+  <p></p>
+  <span class="close-error">×</span>
+</div>
+
+  </div>
+
+<script type="text/javascript">
+ var addWin = '<div id="addGradeForm">'+
+    '<div class="fill-group error-content"></div>'+
+    '<div class="fill-group">'+
+    '<label for="schoolYear" class="label">学年</label>'+
+    '<div class="control">'+
+    '<input type="text" class="input school-year" id="schoolYear" placeholder="" autofocus required="required">'+
+    '<span class="error-info year-error"></span>'+
+    '</div>'+
+    '</div>'+
+
+    '<div class="fill-group">'+
+    '<label for="classNumber" class="label">班级数</label>'+
+    '<div class="control">'+
+    '<input type="text" class="input class-number" id="classNumber" placeholder="">'+
+    '<span class="error-info class-error"></span>'+
+    '</div>'+
+    '</div>'+
+    '</div>';
+</script>
+
+
+<script type="text/javascript" src="../js/dev/grade.js"></script>
+
+
+  <!-- footer -->
+  <!-- <div class="footer">
+    <p style="text-align: center;">© Company 2015</p>
+  </div> -->
+</div>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+
+  <title>课程表</title>
+  <link rel="stylesheet" href="../css/page.css">
+  <script src="../js/lib/jquery.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/lib/dataTables.min.js"></script>
+  <script src="../js/lib/md5.js"></script>
+
+  <script src="../js/dev/utils.js"></script>
+  <script src="../js/plugins.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="../js/lib/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+  <body  class="pages page-schedule">
+  <div class="page-container">
+
+  <!-- content -->
+    <div class="sidebar">
+  <div class="project-name">
+    家校通
+    <div class="options">
+      <!-- <a href="javascript:void(0);" title="修改密码" class="iconfont icon-edit-password" id="editPassword"></a> -->
+      <a href="javascript:void(0);" title="退出" class="iconfont icon-logout" id="logOut"></a>
+    </div>
+  </div>
+
+  <ul id="sidebarList">
+    
+    <li class="side-list">
+      <a href="grade.html" class="link item-grade">年级管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="subject.html" class="link item-subject">科目管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="teacher.html" class="link item-teacher">老师管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="log.html" class="link item-log">操作日志</a>
+    </li>
+    
+  </ul>
+
+
+</div>
+
+
+  <div class="main">
+    <div class="main-header">
+      <i class="iconfont icon-branch"></i>
+      <div class="title-module">
+        <a href="grade.html" class="last-item">年级管理</a><span class="last-item">&nbsp;/&nbsp;</span><a class="last-item sec-item"></a><span class="last-item">&nbsp;/&nbsp;</span><span class="bread-title"></span>
+      </div>
+
+      <!-- div class="control"> -->
+        <!-- <button class="btn-primary btn-add add-grade" id="saveSchedule">保存</button> -->
+      <!-- </div> -->
+
+    </div>
+
+    <div class="main-list datatable-box">
+      <table id="scheduleTable" class="display sis-table schedule-table" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th></th>
+      <!-- <th></th> -->
+      <th>周一</th>
+      <th>周二</th>
+      <th>周三</th>
+      <th>周四</th>
+      <th>周五</th>
+      <th>周六</th>
+      <th>周日</th>
+    </tr>
+  </thead>
+  <tbody class="tb-tbody">
+    <tr data="section-1">
+      <!-- <td rowspan="4" class="time">上午</td> -->
+      <td class="section" data="1">
+      一
+      </td>
+      
+        <td class="lesson week-one" data="1">
+          <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+          <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+        </td>
+      
+        <td class="lesson week-two" data="2">
+          <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+          <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+        </td>
+      
+        <td class="lesson week-three" data="3">
+          <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+          <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+        </td>
+      
+        <td class="lesson week-four" data="4">
+          <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+          <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+        </td>
+      
+        <td class="lesson week-five" data="5">
+          <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+          <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+        </td>
+      
+        <td class="lesson week-six" data="6">
+          <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+          <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+        </td>
+      
+        <td class="lesson week-seven" data="7">
+          <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+          <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+        </td>
+      
+    </tr>
+    <tr data="section-2">
+      <td class="section" data="2">二</td>
+      
+      <td class="lesson week-one" data="1">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-two" data="2">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-three" data="3">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-four" data="4">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-five" data="5">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-six" data="6">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-seven" data="7">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+    </tr>
+    <tr data="section-3">
+      <td class="section" data="3">三</td>
+      
+      <td class="lesson week-one" data="1">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-two" data="2">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-three" data="3">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-four" data="4">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-five" data="5">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-six" data="6">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-seven" data="7">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+    </tr>
+    <tr data="section-4">
+      <td class="section" data="section-4">四</td>
+      
+      <td class="lesson week-one" data="1">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-two" data="2">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-three" data="3">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-four" data="4">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-five" data="5">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-six" data="6">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-seven" data="7">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+    </tr>
+
+    <!-- 下午 -->
+    <tr class="xw" data="section-5">
+      <!-- <td rowspan="4" class="time">下午</td> -->
+      <td class="section" data="5">五</td>
+      
+      <td class="lesson week-one" data="1">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-two" data="2">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-three" data="3">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-four" data="4">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-five" data="5">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-six" data="6">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-seven" data="7">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+    </tr>
+    <tr data="section-6">
+      <td class="section" data="6">六</td>
+      
+      <td class="lesson week-one" data="1">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-two" data="2">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-three" data="3">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-four" data="4">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-five" data="5">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-six" data="6">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-seven" data="7">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+    </tr>
+    <tr data="section-7">
+      <td class="section" data="7">七</td>
+      
+      <td class="lesson week-one" data="1">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-two" data="2">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-three" data="3">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-four" data="4">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-five" data="5">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-six" data="6">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-seven" data="7">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+    </tr>
+    <tr data="section-8">
+      <td class="section" data="8">八</td>
+      
+      <td class="lesson week-one" data="1">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-two" data="2">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-three" data="3">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-four" data="4">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-five" data="5">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-six" data="6">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class="btn-sel"><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+      <td class="lesson week-seven" data="7">
+        <span class="btn-sel"><select class="select sel-subject"><option value="0">-- 科目 --</option></select></span></br>
+        <span class='btn-sel'><select class="select sel-teacher"><option value="0">-- 老师 --</option></select></span>
+      </td>
+      
+    </tr>
+  </tbody>
+</table>
+
+
+      <!-- <ul>
+      <li>节次\星期</li>
+      <li>星期一</li>
+      <li>星期二</li>
+      <li>星期三</li>
+      <li>星期四</li>
+      <li>星期五</li>
+      <li class="border-r">星期六</li>
+
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point1">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="border-r"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point2">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="border-r"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point3">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="border-r"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point4">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="border-r"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul>
+        <li>--</li>
+        <li>--</li>
+        <li>--</li>
+        <li>--</li>
+        <li>--</li>
+        <li>--</li>
+        <li class="border-r">--</li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point5">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="border-r"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point6">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="border-r"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point7">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="border-r"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+      <ul name="point8">
+        <li class="border-b"></li>
+        <li class="border-b"></li>
+        <li class="border-b"></li>
+        <li class="border-b"></li>
+        <li class="border-b"></li>
+        <li class="border-b"></li>
+        <li class="border-l"></li>
+      </ul>
+      <div style="clear:both; float:none;"></div> -->
+    </div>
+
+    <div class="ui-backerror" style="display: none;">
+  <p></p>
+  <span class="close-error">×</span>
+</div>
+
+  </div>
+
+  <script type="text/javascript" src="../js/dev/schedule.js"></script>
+
+
+
+  <!-- footer -->
+  <!-- <div class="footer">
+    <p style="text-align: center;">© Company 2015</p>
+  </div> -->
+</div>
+</html>

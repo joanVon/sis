@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+
+  <title>导入学生</title>
+  <link rel="stylesheet" href="../css/page.css">
+  <script src="../js/lib/jquery.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/lib/dataTables.min.js"></script>
+  <script src="../js/lib/md5.js"></script>
+
+  <script src="../js/dev/utils.js"></script>
+  <script src="../js/plugins.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="../js/lib/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+  <body  class="pages page-input">
+  <div class="page-container">
+
+  <!-- content -->
+  <div class="sidebar">
+  <div class="project-name">
+    家校通
+    <div class="options">
+      <!-- <a href="javascript:void(0);" title="修改密码" class="iconfont icon-edit-password" id="editPassword"></a> -->
+      <a href="javascript:void(0);" title="退出" class="iconfont icon-logout" id="logOut"></a>
+    </div>
+  </div>
+
+  <ul id="sidebarList">
+    
+    <li class="side-list">
+      <a href="grade.html" class="link item-grade">年级管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="subject.html" class="link item-subject">科目管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="teacher.html" class="link item-teacher">老师管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="log.html" class="link item-log">操作日志</a>
+    </li>
+    
+  </ul>
+
+
+</div>
+
+
+<div class="main">
+  <div class="main-header">
+    <i class="iconfont icon-branch"></i>
+    <div class="title-module">
+      <a href="grade.html" class="last-item">年级管理</a><span class="last-item">&nbsp;/&nbsp;</span><span class="bread-title">导入学生</span>
+    </div>
+
+    <button class="btn-primary btn-add add-grade" id="addStudents">+ 添加全部学生</button>
+
+  </div>
+
+  <div class="main-list datatable-box">
+  <form id="uploadForm" enctype="multipart/form-data" style="margin-bottom: 25px;">
+    <input id="file" type="file" name="file"/>
+    <button id="upload" class="btn-primary btn-low" type="button">上传</button>
+  </form>
+
+    <table id="inputTable" class="display sis-table" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th>班级号</th>
+          <th>学籍号</th>
+          <th>学号</th>
+          <th>用户名</th>
+          <th>姓名</th>
+        </tr>
+      </thead>
+      <tbody class="tb-tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="ui-backerror" style="display: none;">
+  <p></p>
+  <span class="close-error">×</span>
+</div>
+
+</div>
+
+<script type="text/javascript" src="../js/dev/input.js"></script>
+
+
+
+  <!-- footer -->
+  <!-- <div class="footer">
+    <p style="text-align: center;">© Company 2015</p>
+  </div> -->
+</div>
+</html>

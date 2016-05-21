@@ -1,12 +1,1 @@
 .DS_Store
-.sass-cache
-/source/*
-/node_modules/
-
-.ruby-gemset
-.ruby-version
-
-_config.yml
-package.json
-Gemfile
-Gemfile.lock

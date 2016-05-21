@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+
+  <title>学生管理</title>
+  <link rel="stylesheet" href="../css/page.css">
+  <script src="../js/lib/jquery.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/lib/dataTables.min.js"></script>
+  <script src="../js/lib/md5.js"></script>
+
+  <script src="../js/dev/utils.js"></script>
+  <script src="../js/plugins.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="../js/lib/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+  <body  class="pages page-student">
+  <div class="page-container">
+
+  <!-- content -->
+    <div class="sidebar">
+  <div class="project-name">
+    家校通
+    <div class="options">
+      <!-- <a href="javascript:void(0);" title="修改密码" class="iconfont icon-edit-password" id="editPassword"></a> -->
+      <a href="javascript:void(0);" title="退出" class="iconfont icon-logout" id="logOut"></a>
+    </div>
+  </div>
+
+  <ul id="sidebarList">
+    
+    <li class="side-list">
+      <a href="grade.html" class="link item-grade">年级管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="subject.html" class="link item-subject">科目管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="teacher.html" class="link item-teacher">老师管理</a>
+    </li>
+    
+    <li class="side-list">
+      <a href="log.html" class="link item-log">操作日志</a>
+    </li>
+    
+  </ul>
+
+
+</div>
+
+
+  <div class="main">
+    <div class="main-header">
+      <i class="iconfont icon-branch"></i>
+      <div class="title-module">
+        <a href="grade.html" class="last-item">年级管理</a><span class="last-item">&nbsp;/&nbsp;</span><a class="last-item sec-item"></a><span class="last-item">&nbsp;/&nbsp;</span><span class="bread-title">学生管理</span>
+      </div>
+
+      <!-- <div class="control"> -->
+        <button class="btn-primary btn-add add-grade" id="addStudent">+ 新增学生</button>
+      <!-- </div> -->
+
+    </div>
+
+    <div class="main-list datatable-box">
+      <table id="classmatesTable" class="display sis-table" cellpadding="0" cellspacing="0">
+        <thead></thead>
+        <tbody class="tb-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="ui-backerror" style="display: none;">
+  <p></p>
+  <span class="close-error">×</span>
+</div>
+
+  </div>
+
+<script type="text/javascript">
+ var addClassmate = '<div id="addClassmateForm">'+
+    '<div class="fill-group error-content"></div>'+
+    '<div class="fill-group">'+
+    '<label for="studentCode" class="label">学籍号</label>'+
+    '<div class="control">'+
+    '<input type="text" class="input student-code" id="studentCode" autofocus>'+
+    '<span class="error-info code-error"></span>'+
+    '</div>'+
+    '</div>'+
+
+    '<div class="fill-group">'+
+    '<label for="studentNo" class="label">学号</label>'+
+    '<div class="control">'+
+    '<input type="text" class="input studentno" id="studentNo">'+
+    '<span class="error-info studentno-error"></span>'+
+    '</div>'+
+    '</div>'+
+
+    '<div class="fill-group">'+
+    '<label for="userName" class="label">用户名</label>'+
+    '<div class="control">'+
+    '<input type="text" class="input username" id="userName">'+
+    '<span class="error-info username-error"></span>'+
+    '</div>'+
+    '</div>'+
+
+    '<div class="fill-group">'+
+    '<label for="fullName" class="label">姓名</label>'+
+    '<div class="control">'+
+    '<input type="text" class="input teacher-name" id="fullName" placeholder="">'+
+    '<span class="error-info name-error"></span>'+
+    '</div>'+
+    '</div>'+
+    '</div>';
+</script>
+
+
+<script type="text/javascript" src="../js/dev/student.js"></script>
+
+
+  <!-- footer -->
+  <!-- <div class="footer">
+    <p style="text-align: center;">© Company 2015</p>
+  </div> -->
+</div>
+</html>
