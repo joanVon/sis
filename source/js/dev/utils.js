@@ -30,27 +30,6 @@ $(function() {
   // 输入内容时关闭提示层
   $(document.activeElement).on('keydown', function () { closeBackError(); });
 
-  /*var token_ex = getCookie("token");
-
-  if(token_ex == undefined) {
-    location.href = "../login.html";
-  }*/
-
-  /*var editPassword = '待续';
-
-  $('#editPassword').click(function() {
-    var classDialog = new Dialog(null, {
-    title: '重置密码',
-    content: editPassword,
-    width: '600',
-    hasBtn: true,
-    btnText: ['确定','取消'],
-    btnRole: ['confirm','cancel'],
-    confirm: function () {
-
-    }
-  });*/
-
 });
 
 /*判断是否为空 空false 非空true*/
