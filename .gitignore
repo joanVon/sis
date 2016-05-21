@@ -1,7 +1,7 @@
 .DS_Store
 .sass-cache
-source/
-node_modules/
+/source/*
+/node_modules/
 
 .ruby-gemset
 .ruby-version
