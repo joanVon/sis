@@ -1,9 +1,7 @@
 SIS(School Information System)
 ==================
 
-This is a simple demo for using [RAP](http://thx.github.io/RAP/index_zh.html)
-
-```
+```javascript
 var DiySelect = function (select, options) {
     options = $.extend({}, $.fn.diySelect.defaults, options);
 
@@ -14,3 +12,6 @@ var DiySelect = function (select, options) {
 };
 
 ```
+
+
+
